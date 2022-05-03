@@ -60,7 +60,7 @@ download_source() (
   if [ ! "$local" = "true" ] ; then
     echo "Downloading source file from '$url'."
     echo "Saving source file in '$file'".
-    wget -O $file -c $url
+    wget -O $file -c $url --no-check-certificate
   else
     echo "Using local source file '$file'."
   fi
